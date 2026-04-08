@@ -1,3 +1,2 @@
-openenv-core
-openai
-pydantic
+torch==2.1.0
+openenv-core>=0.2.0
