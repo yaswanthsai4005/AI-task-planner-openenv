@@ -5,6 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ai-task-planner"
 version = "0.1.0"
+description = "AI Task Planner"
+requires-python = ">=3.9"
+dependencies = [
+    "torch==2.1.0",
+    "openenv-core>=0.2.0",
+]
 
 [tool.openenv]
 entrypoint = "environment:TaskEnv"
