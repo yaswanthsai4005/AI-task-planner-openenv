@@ -1,2 +1,14 @@
-# AI-task-planner-openenv
-Agentic AI Task Planning Environment built with OpenEnv — evaluates decision-making by scoring task execution plans using dynamic priorities and reward logic.
+# AI Task Planner OpenEnv
+
+This project implements a real-world task planning environment where AI agents learn optimal task ordering.
+
+## Tasks
+- Email triage (easy)
+- Code review (medium)
+- Data cleaning (hard)
+
+## Reward
+Based on priority and execution order.
+
+## Run
+openenv validate
