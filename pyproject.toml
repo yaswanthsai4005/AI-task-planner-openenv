@@ -8,9 +8,14 @@ version = "0.1.0"
 description = "AI Task Planner"
 requires-python = ">=3.9"
 dependencies = [
-    "torch==2.1.0",
+    "fastapi",
+    "uvicorn",
+    "openai",
     "openenv-core>=0.2.0",
 ]
+
+[project.scripts]
+openenv-server = "server.app:main"
 
 [tool.openenv]
 entrypoint = "environment:TaskEnv"
