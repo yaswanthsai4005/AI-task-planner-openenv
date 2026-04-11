@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "ai-task-planner"
@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-openenv-server = "server.app:main"
+server = "server.app:main"
 
 [tool.openenv]
 entrypoint = "environment:TaskEnv"
