@@ -6,7 +6,7 @@ import uvicorn
 from server.app import app
 
 def start_server():
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
+    uvicorn.run(app, host="0.0.0.0", port=7860, log_level="info")
 
 def main():
     # Start server in background thread
@@ -19,7 +19,7 @@ def main():
     # Wait for server to be ready
     for i in range(20):
         try:
-            r = requests.post("http://localhost:8000/reset", timeout=5)
+            r = requests.post("http://localhost:7860/reset", timeout=5)
             r.raise_for_status()
             data = r.json()
             print(f"[Agent] Connected on attempt {i+1}")
@@ -40,7 +40,7 @@ def main():
     plan = [t["id"] for t in sorted_tasks]
     print(f"[Agent] Plan: {plan}")
 
-    result = requests.post("http://localhost:8000/step", json={"plan": plan}, timeout=5)
+    result = requests.post("http://localhost:7860/step", json={"plan": plan}, timeout=5)
     result.raise_for_status()
     output = result.json()
 
